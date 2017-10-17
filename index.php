@@ -5,18 +5,15 @@ require_once('variables.php');
 $dbconnection = mysqli_connect(HOST,USER,PASSWORD,DB_NAME) or die ('connection failed');
 
 //BUILD THE query
-$query = "SELECT * FROM blog WHERE approved=1 Order By date ASC";
+$query = "SELECT * FROM checkout";
 
 //NOW TRY AND TALK TO THE database
 $result = mysqli_query($dbconnection, $query) or die ('query failed');
 ?>
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Blog</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+<?php include_once('header.php')?>
+    <title>Home</title>
+    
   </head>
   <body>
     <div id="container">

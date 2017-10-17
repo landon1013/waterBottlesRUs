@@ -1,0 +1,57 @@
+/* CSS Document */
+body{
+	font-family: $font-stack;
+}
+
+@include breakpoint(laptop){
+.hero{
+	width: 100%;
+	height: 30em;
+	overflow: hidden;
+	
+	img{
+		width: 100%;
+		
+	}
+	input{
+
+		position: absolute;
+		border: 1px solid $main-color;
+		background: transparent;
+		padding: .5em 4em;
+		border-radius: 10px;
+		top: 45%;
+		right: 207px;
+		z-index: 1;
+	}
+}
+
+.wrapper{
+	width: 75%;
+	margin: auto;
+}
+
+}// end laptop breakpoint
+
+@include breakpoint(tablet){
+	.hero{
+	input{		
+		right: 75px;
+	}
+	}
+
+.wrapper{
+	width: 75%;
+	margin: auto;
+}
+
+	
+
+}//end of tablet breakpoint
+
+
+
+// keep floating items clear
+.keepOpen{
+	clear: both;
+}

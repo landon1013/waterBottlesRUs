@@ -1,0 +1,90 @@
+/* variables css*/
+/* CSS Document */
+/* CSS Document */
+body {
+  font-family: "Montserrat", sans-serif; }
+
+@media (max-width: 1300px) {
+  .hero {
+    width: 100%;
+    height: 30em;
+    overflow: hidden; }
+    .hero img {
+      width: 100%; }
+    .hero input {
+      position: absolute;
+      border: 1px solid #000;
+      background: transparent;
+      padding: .5em 4em;
+      border-radius: 10px;
+      top: 45%;
+      right: 207px;
+      z-index: 1; }
+
+  .wrapper {
+    width: 75%;
+    margin: auto; } }
+@media (max-width: 768px) {
+  .hero input {
+    right: 75px; }
+
+  .wrapper {
+    width: 75%;
+    margin: auto; } }
+.keepOpen {
+  clear: both; }
+
+/*header css*/
+/* CSS Document */
+header {
+  width: 80%;
+  margin: auto; }
+
+@media (max-width: 1300px) {
+  .logo {
+    height: 114px;
+    width: 12%;
+    float: left; }
+    .logo img {
+      padding: .7em;
+      width: 100%; }
+
+  .center {
+    width: 35%;
+    float: right;
+    height: 114.4px; }
+    .center .mainMenu {
+      display: table-cell;
+      vertical-align: middle;
+      width: 100%;
+      padding: 3em 0; }
+      .center .mainMenu li {
+        float: left;
+        list-style-type: none;
+        font-size: .84em; }
+        .center .mainMenu li a {
+          text-decoration: none;
+          color: #000;
+          padding: .9em 1em .2em .9em;
+          margin-right: .5em; }
+        .center .mainMenu li a:hover {
+          border-bottom: 1px solid #000; }
+        .center .mainMenu li a.active {
+          border-bottom: 1px solid #999; } }
+@media (max-width: 768px) {
+  .logo {
+    height: 114px;
+    width: 16%;
+    float: left; }
+    .logo img {
+      padding: 1em;
+      width: 100%; }
+
+  .center {
+    width: 60%;
+    float: right;
+    height: 114.4px; }
+    .center .mainMenu {
+      display: table-cell;
+      vertical-align: middle;
+      padding: 3em 0; } }

@@ -1,0 +1,24 @@
+
+$font-stack: 'Montserrat', sans-serif;
+$heavy-font: 700;
+$normal-font: 400;
+$padding: 2%;
+
+// colors
+
+$main-color: #000;
+$secondary-color: #999;
+
+
+@mixin breakpoint($point) {
+	@if $point == laptop {
+		@media (max-width: 1300px) { @content ; }
+	}
+	@else if $point == tablet {
+		@media (max-width: 768px) { @content ; }
+	}
+	@else if $point == phone {
+		@media (max-width: 480px) { @content ; }
+	}
+
+}

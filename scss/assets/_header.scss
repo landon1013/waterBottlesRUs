@@ -1,0 +1,97 @@
+/* CSS Document */
+header{
+ width: 80%;
+margin: auto;
+}
+
+@include breakpoint(laptop){
+.logo{
+
+	height: 114px;
+	width: 12%;
+	float: left;
+	
+	img{
+		padding: .7em;
+		width: 100%;
+	}
+	
+}
+
+
+.center{
+	width: 35%;
+	float: right;
+	height: 114.4px;
+	
+
+.mainMenu{
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+	padding: 3em 0;
+	
+
+		
+	li{
+		float: left;
+		list-style-type: none;
+		font-size: .84em;
+
+		
+		
+		a{
+
+			text-decoration: none;
+			color: #000;
+			padding: .9em 1em .2em .9em;
+			margin-right: .5em;
+		} // and of anchor
+		a:hover{
+			border-bottom: 1px solid $main-color;
+		}
+		a.active{
+			border-bottom: 1px solid $secondary-color;
+		}
+	} // end of list item
+	
+
+	
+}// end main menu dif
+}//end center div
+	
+}//end laptop breakpoint
+
+ @include breakpoint(tablet) {
+   
+	 .logo{
+
+	height: 114px;
+	width: 16%;
+	float: left;
+	
+	img{
+		padding: 1em;
+		width: 100%;
+	}
+	
+}
+
+	
+.center{
+	width: 60%;
+	float: right;
+	height: 114.4px;
+	
+
+	.mainMenu{
+	display: table-cell;
+	vertical-align: middle;
+	padding: 3em 0;
+		
+	
+	}
+	
+}
+    }
+
