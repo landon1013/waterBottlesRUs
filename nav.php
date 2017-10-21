@@ -4,7 +4,7 @@
  </div>
  
  
-<div id="mySidenav" class="sidenav">
+<div id="mySidenav" class="sidenav" onMouseMove="menuSize()">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <a href="index.php" class="active">Home</a>
             <a href="shopping.php">Shop</a>

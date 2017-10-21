@@ -68,8 +68,6 @@ header {
 @media only screen and (min-width: 960px) {
   header {
     width: 70%; }
-    header span {
-      display: none; }
 
   #mySidenav {
     width: 0; }
