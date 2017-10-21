@@ -18,6 +18,8 @@ $result = mysqli_query($dbconnection, $query) or die ('query failed');
   <body>
     <div id="container">
       <?php include_once('nav.php'); ?>
+      <?php include_once('hero.php') ?>
+
       <h1>Blog Commennts</h1>
 
       <?php
@@ -33,6 +35,5 @@ $result = mysqli_query($dbconnection, $query) or die ('query failed');
       }
     ?>
     </div>
+<?php include_once('footer.php'); ?>
 
-  </body>
-</html>
