@@ -1,4 +1,7 @@
 // Rem output with px fallback
+$phoneWidth: 768px;
+$tabletWidth: 992px;
+$laptopWidth: 2000px;
 @mixin font-size($sizeValue: 1) {
 	font-size: ($sizeValue * 16) * 1px;
 	font-size: $sizeValue * 1rem;
@@ -43,7 +46,7 @@
 // @include breakpoint(laptop);
 @mixin breakpoint($point) {
     @if $point == laptop {
-        @media (max-width: $laptopWidth) { @content ; }
+        @media (max-width: $laptopWidth)  { @content ; }
     }
     @else if $point == tablet {
         @media (max-width: $tabletWidth) { @content ; }
