@@ -1,0 +1,125 @@
+/* variables css*/
+/* CSS Document */
+/* CSS Document */
+body {
+  font-family: "Montserrat", sans-serif; }
+
+div.hero {
+  background: url(../img/heroImage.jpg) 0 0 no-repeat;
+  padding-top: 35%;
+  height: 12em;
+  background-size: cover; }
+  div.hero img {
+    width: 100%; }
+  div.hero input {
+    position: absolute;
+    border: 1px solid #000;
+    background: transparent;
+    padding: .3em 1.4em;
+    border-radius: 10px;
+    top: 25%;
+    right: 10px;
+    z-index: 1; }
+  div.hero input:hover {
+    color: #eee;
+    background-color: #000; }
+
+#container {
+  width: 75%;
+  margin: auto; }
+
+@media (min-width: 600px) {
+  .hero input {
+    right: 75px;
+    top: 500px; }
+
+  .wrapper {
+    width: 75%;
+    margin: auto; } }
+@media (min-width: 600px) {
+  .hero input {
+    right: 75px;
+    top: 500px; }
+
+  .wrapper {
+    width: 75%;
+    margin: auto; } }
+.keepOpen {
+  clear: both; }
+
+/*header css*/
+.logo {
+  height: 114px;
+  width: 15%;
+  float: left;
+  display: block; }
+  .logo img {
+    padding: .7em;
+    width: 100%; }
+
+.fa-shopping-cart {
+  text-align: center; }
+
+.center {
+  width: 35%;
+  float: right;
+  height: 114.4px; }
+
+header {
+  height: 100px; }
+  header span {
+    float: right;
+    padding: 2em 1em; }
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px; }
+  .sidenav a {
+    padding: 1em 8px 1em 8px;
+    text-decoration: none;
+    font-size: 80%;
+    font-size: 80%;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    color: #000; }
+  .sidenav .closebtn:hover {
+    border: none; }
+  .sidenav a:hover {
+    border-bottom: 1px solid #000; }
+  .sidenav a.active {
+    border-bottom: 1px solid #000; }
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 18%;
+    font-size: 36px;
+    margin-left: 50px;
+    border-bottom: none; }
+  .sidenav .sidenav {
+    padding-top: 15px; }
+  .sidenav .sidenav a {
+    font-size: 18px; }
+
+@media (min-width: 600px) {
+  header {
+    width: 80%;
+    margin: auto; }
+
+  .logo img {
+    width: 100%; } }
+@media (min-width: 600px) {
+  header {
+    width: 80%;
+    margin: auto; }
+
+  .logo img {
+    width: 100%; } }

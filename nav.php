@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
     <header>
    <div class="logo"><img src="img/water_bottle_r_us.png" alt="logo"></div>
 <div id="mySidenav" class="sidenav">
@@ -14,4 +12,4 @@
 
 <span style="font-size:20px;cursor:pointer" onclick="openNav()"> &#9776;</span>
 </header>
->>>>>>> Stashed changes
+</header>

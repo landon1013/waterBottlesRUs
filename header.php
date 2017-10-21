@@ -1,5 +1,4 @@
-<<<<<<< Updated upstream
-=======
+
 <!doctype HTML>
 <html>
 <head>
@@ -31,4 +30,5 @@ $(this).addClass("active");
  })
 
 </script>
->>>>>>> Stashed changes
+
+</script>
