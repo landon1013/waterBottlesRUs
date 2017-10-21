@@ -1,13 +1,12 @@
 
-/* variables css*/	
+/* assets */
 @import 'assets/variables.scss';
-
-
-/* CSS Document */
-
+@import 'assets/header.scss';
 @import 'assets/body.scss';
 
+/* partials */
+@import 'partials/mixins.scss';
 
-/*header css*/
-@import 'assets/header.scss';
-
+/* site */
+@import 'site/site.scss';
+@import 'site/home.scss';

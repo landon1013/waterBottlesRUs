@@ -1,4 +1,3 @@
-
 <?php
 require_once('variables.php');
 
@@ -17,26 +16,22 @@ $result = mysqli_query($dbconnection, $query) or die ('query failed');
     
   </head>
   <body>
-   <?php include_once('nav.php'); ?>
-    <?php include_once('hero.php')?>
-    <div id="container">
-      
-       
-
-      <h1>Blog Commennts</h1>
-
-      <?php
-
-      // DISPLAY WHAT WE FOUND
-      while ($row = mysqli_fetch_array($result)) {
-        echo '<article>';
-        echo '<h3>'.$row['name'].'</h3>';
-        echo '<p class="topic">'.$row['topic'].'</p>';
-        echo '<p>'.$row['comment'].'</p>';
-        echo '<p class="date">'.$row['date'].'</p>';
-        echo '</article>';
-      }
-    ?>
+    <?php include_once('nav.php'); ?>
+    <div id="home" class="container">
+      <div class="hero">
+        <a href="shop.html"><div class="btn shop">
+          Shop Now
+        </div></a>
+      </div>
+      <div class="about">
+        <h2><span>ABOUT US</span></h2>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad Lorem ipsum dolor sit amet,
+          </p>
+          <img src="img/main-bottle.png" />
+        </div>
+      </div>
     </div>
 
 <?php include_once('footer.php'); ?>
