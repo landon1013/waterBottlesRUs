@@ -1,0 +1,21 @@
+body {
+  background: $athens-gray;
+  font-family: $mainFont;
+
+  .wrapper {
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+
+.shade {
+	width: 100%;
+	position: absolute;
+	z-index: -2;
+	left: 0;
+}
+
+.alignment {
+	margin: 0 auto;
+	padding: 0 45px;
+}

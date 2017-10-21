@@ -13,7 +13,7 @@ $result = mysqli_query($dbconnection, $query) or die ('query failed');
 
 <?php include_once('header.php')?>
     <title>Home</title>
-    
+
   </head>
   <body>
     <div id="container">
