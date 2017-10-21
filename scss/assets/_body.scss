@@ -1,16 +1,22 @@
+
 /* CSS Document */
 body{
 	font-family: $font-stack;
 }
 
-@include breakpoint(laptop){
-.hero{
-	width: 100%;
-	height: 30em;
-	overflow: hidden;
+
+div.hero{
+	background: url(../img/heroImage.jpg) 0 0 no-repeat;
+	padding-top: 35%;
+	height: 12em;
+	background-size: cover;
+	//width: 100%;
+	//height: 30em;
+	//overflow: hidden;
 	
 	img{
 		width: 100%;
+		
 		
 	}
 	input{
@@ -18,26 +24,31 @@ body{
 		position: absolute;
 		border: 1px solid $main-color;
 		background: transparent;
-		padding: .5em 4em;
+		padding: .3em 1.4em;
 		border-radius: 10px;
-		top: 45%;
-		right: 207px;
+		top: 25%;
+		right: 10px;
 		z-index: 1;
+	}
+	input:hover{
+		color: #eee;
+		background-color: $main-color;
 	}
 }
 
-.wrapper{
+#container{
 	width: 75%;
 	margin: auto;
 }
 
-}// end laptop breakpoint
 
 @include breakpoint(tablet){
 	.hero{
 	input{		
 		right: 75px;
+		top: 500px;
 	}
+		
 	}
 
 .wrapper{

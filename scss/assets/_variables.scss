@@ -11,14 +11,21 @@ $secondary-color: #999;
 
 
 @mixin breakpoint($point) {
-	@if $point == laptop {
-		@media (max-width: 1300px) { @content ; }
+
+       @if $point == tablet {
+        @media (min-width: 600px)  { @content ; }
+    }
+    @else if $point == laptop {
+        @media(min-width: 960px)  { @content ; }
+    }
+
+	@if $point == tablet {
+		@media (min-width: 600px)  { @content ; }
 	}
-	@else if $point == tablet {
-		@media (max-width: 768px) { @content ; }
-	}
-	@else if $point == phone {
-		@media (max-width: 480px) { @content ; }
+	@else if $point == laptop {
+		@media(min-width: 960px)  { @content ; }
 	}
 
+
 }
+
