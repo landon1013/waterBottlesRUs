@@ -11,12 +11,21 @@ $secondary-color: #999;
 
 
 @mixin breakpoint($point) {
+<<<<<<< Updated upstream
        @if $point == tablet {
         @media (min-width: 600px)  { @content ; }
     }
     @else if $point == laptop {
         @media(min-width: 960px)  { @content ; }
     }
+=======
+	@if $point == tablet {
+		@media (min-width: 600px)  { @content ; }
+	}
+	@else if $point == laptop {
+		@media(min-width: 960px)  { @content ; }
+	}
+>>>>>>> Stashed changes
 
 }
 

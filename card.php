@@ -13,15 +13,14 @@ $result = mysqli_query($dbconnection, $query) or die ('query failed');
 
 <?php include_once('header.php')?>
 
-    <title>Checkout</title>
     
   </head>
   <body>
     
       <?php include_once('nav.php'); ?>
-
+	<div class="keepOpen"></div>
          <div id="container">
+         
       <h1>Checkout</h1>
 
-</body>
-</html>
+<?php include_once('footer.php') ?>

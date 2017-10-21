@@ -16,9 +16,16 @@ $result = mysqli_query($dbconnection, $query) or die ('query failed');
 
   </head>
   <body>
+   <?php include_once('nav.php'); ?>
+    <?php include_once('hero.php')?>
     <div id="container">
+<<<<<<< Updated upstream
       <?php include_once('nav.php'); ?>
       <?php include_once('hero.php') ?>
+=======
+      
+       
+>>>>>>> Stashed changes
 
       <h1>Blog Commennts</h1>
 
@@ -37,3 +44,7 @@ $result = mysqli_query($dbconnection, $query) or die ('query failed');
     </div>
 <?php include_once('footer.php'); ?>
 
+<<<<<<< Updated upstream
+=======
+<?php include_once('footer.php'); ?>
+>>>>>>> Stashed changes
