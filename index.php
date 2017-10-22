@@ -15,9 +15,10 @@ $result = mysqli_query($dbconnection, $query) or die ('query failed');
     <title>Home</title>
     
   </head>
-  <body>
+  <body >
     <?php include_once('nav.php'); ?>
     <div id="home" class="container">
+     <div id="main">
       <div class="hero">
         <a href="shop.html"><div class="btn shop">
           Shop Now
@@ -32,6 +33,6 @@ $result = mysqli_query($dbconnection, $query) or die ('query failed');
           <img src="img/main-bottle.png" />
         </div>
       </div>
-    </div>
-
+    </div> <!-- end of main div -->
+</div> <!-- end of container div -->
 <?php include_once('footer.php'); ?>

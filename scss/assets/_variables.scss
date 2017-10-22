@@ -10,22 +10,13 @@ $main-color: #000;
 $secondary-color: #999;
 
 
-@mixin breakpoint($point) {
 
-       @if $point == tablet {
-        @media (min-width: 600px)  { @content ; }
+
+@mixin responsive($brpoint) {
+    @if $brpoint == tabletM {
+        @media only screen and (min-width: 600px)  { @content ; }
     }
-    @else if $point == laptop {
-        @media(min-width: 960px)  { @content ; }
+    @else if $brpoint == laptopM {
+        @media only screen and (min-width: 960px)  { @content ; }
     }
-
-	@if $point == tablet {
-		@media (min-width: 600px)  { @content ; }
-	}
-	@else if $point == laptop {
-		@media(min-width: 960px)  { @content ; }
-	}
-
-
 }
-
