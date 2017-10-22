@@ -15,7 +15,7 @@ $result = mysqli_query($dbconnection, $query) or die ('query failed');
     <title>Home</title>
     
   </head>
-  <body>
+  <body >
     <?php include_once('nav.php'); ?>
     <div id="home" class="container">
      <div id="main">

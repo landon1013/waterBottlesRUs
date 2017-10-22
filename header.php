@@ -13,3 +13,18 @@
   
  <!-- load lates jquery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+<script>
+$(document).ready(function(){
+var str=location.href.toLowerCase();
+$(".sidenav  .floatNav a").each(function() {
+if (str.indexOf(this.href.toLowerCase()) > -1) {
+ $("a.active").removeClass("active");
+$(this).addClass("active");
+}
+ });
+ })
+
+</script>
