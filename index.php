@@ -15,24 +15,24 @@ $result = mysqli_query($dbconnection, $query) or die ('query failed');
     <title>Home</title>
     
   </head>
-  <body>
-    <div id="container">
-      <?php include_once('nav.php'); ?>
-      <h1>Blog Commennts</h1>
-
-      <?php
-
-      // DISPLAY WHAT WE FOUND
-      while ($row = mysqli_fetch_array($result)) {
-        echo '<article>';
-        echo '<h3>'.$row['name'].'</h3>';
-        echo '<p class="topic">'.$row['topic'].'</p>';
-        echo '<p>'.$row['comment'].'</p>';
-        echo '<p class="date">'.$row['date'].'</p>';
-        echo '</article>';
-      }
-    ?>
-    </div>
-
-  </body>
-</html>
+  <body >
+    <?php include_once('nav.php'); ?>
+    <div id="home" class="container">
+     <div id="main">
+      <div class="hero">
+        <a href="shop.html"><div class="btn shop">
+          Shop Now
+        </div></a>
+      </div>
+      <div class="about">
+        <h2><span>ABOUT US</span></h2>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad Lorem ipsum dolor sit amet,
+          </p>
+          <img src="img/main-bottle.png" />
+        </div>
+      </div>
+    </div> <!-- end of main div -->
+</div> <!-- end of container div -->
+<?php include_once('footer.php'); ?>

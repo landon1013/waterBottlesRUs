@@ -1,97 +1,151 @@
-/* CSS Document */
-header{
- width: 80%;
-margin: auto;
-}
-
-@include breakpoint(laptop){
 .logo{
 
-	height: 114px;
-	width: 12%;
+    height: 114px;
+    width: 15%;
 	float: left;
-	
-	img{
-		padding: .7em;
-		width: 100%;
-	}
-	
+    display: block;
+
+    
+    img{
+        
+        padding: .7em 1.5em;
+        width: 100%;
+    }
+    
 }
 
 
+
+       
 .center{
-	width: 35%;
-	float: right;
-	height: 114.4px;
-	
-
-.mainMenu{
-	display: table-cell;
-	vertical-align: middle;
-	width: 100%;
-	padding: 3em 0;
-	
-
-		
-	li{
-		float: left;
-		list-style-type: none;
-		font-size: .84em;
-
-		
-		
-		a{
-
-			text-decoration: none;
-			color: #000;
-			padding: .9em 1em .2em .9em;
-			margin-right: .5em;
-		} // and of anchor
-		a:hover{
-			border-bottom: 1px solid $main-color;
-		}
-		a.active{
-			border-bottom: 1px solid $secondary-color;
-		}
-	} // end of list item
-	
-
-	
-}// end main menu dif
-}//end center div
-	
-}//end laptop breakpoint
-
- @include breakpoint(tablet) {
-   
-	 .logo{
-
-	height: 114px;
-	width: 16%;
-	float: left;
-	
-	img{
-		padding: 1em;
-		width: 100%;
-	}
-	
-}
-
-	
-.center{
-	width: 60%;
-	float: right;
-	height: 114.4px;
-	
-
-	.mainMenu{
-	display: table-cell;
-	vertical-align: middle;
-	padding: 3em 0;
-		
-	
-	}
-	
-}
+    width: 35%;
+    float: right;
+    height: 114.4px;
     }
 
+
+header{
+    height: 100px;
+    
+    span{
+        float: right;
+        padding: 1em 1em;
+        
+    }
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 3px;
+    right: 3px;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+
+
+ a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+
+ .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+}
+
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+
+
+
+@include responsive(tabletM) {
+    header{
+        width: 80%;
+        margin: auto
+    }
+    .logo{
+        width: 12%;
+        img{
+        width:100%;
+        }
+    }
+	}
+
+@include responsive(laptopM) {
+
+	
+	header{
+		width: 70%;
+		span{
+			display: none;
+			
+		}
+	}
+	#mySidenav{
+		float: right;
+
+	}
+	.floatNav{
+		float: right;
+		padding: 1em 2em;
+	}
+	.sidenav {
+    height: 70px;
+    width:60%;
+    z-index: 1;
+    top: -36px;
+    right: 3px;
+    background-color: white;
+    overflow-y: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+
+
+ a, a:visited {
+
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+   // display: block;
+	float: left;
+    transition: 0.3s;
+}
+
+ a:hover {
+    color: $main-color;
+}
+	a.active {
+    color: $main-color;
+	text-decoration: underline;
+}
+		 a:hover i{
+    color: $main-color;
+}
+	a.active i {
+    color: $main-color;
+	text-decoration: underline;
+}
+
+
+	
+
+ .closebtn {
+    display: none;
+}
+}
+
+}//end laptop breakpoint

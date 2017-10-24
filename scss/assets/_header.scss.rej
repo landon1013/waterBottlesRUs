@@ -1,0 +1,9 @@
+diff a/scss/assets/_header.scss b/scss/assets/_header.scss	(rejected hunks)
+@@ -104,6 +104,7 @@
+ 
+ 	}
+ 	.floatNav{
++		float: right;
+ 		padding: 1em 2em;
+ 	}
+ 	.sidenav {
