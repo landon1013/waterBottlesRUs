@@ -1,6 +1,6 @@
 var isClicked = document.getElementById("openbtn") ;
 var isClosed = document.getElementById("closebtn") ;
- document.getElementById("mySidenav").style.width = "0";
+//document.getElementById("mySidenav").style.width = "0";
 function openNav() {
 	if($(window).width() < 960){
     document.getElementById("mySidenav").style.width = "250px";
@@ -21,10 +21,10 @@ var width = $(window).width();
 
 $(window).resize(function(){
 	width = $(window).width();
-	
-if(width < 960 ){
+	console.log (width);
+if(width <= 960 ){
 	document.getElementById("mySidenav").style.width = "0";
-	isClosed = isClosed.addEventListener("click",closeNav);
+	isClosed = isClosed.addEventListener("click", closeNav);
 	isClicked = isClicked.addEventListener("click", openNav);
 	
 	
@@ -33,7 +33,7 @@ if(width < 960 ){
 else{
  document.getElementById("mySidenav").style.width = "50%";
 }
-})
+});
 
 console.log (width);
 
