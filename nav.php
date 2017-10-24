@@ -8,7 +8,7 @@
  <div class="floatNav">
   <a href="javascript:void(0)" class="closebtn"  id="closebtn">&times;</a>
       <a href="index.php" class="active">Home</a>
-            <a href="shopping.php">Shop</a>
+            <a href="shopping.php"  >Shop</a>
             <a href="contact.php">Contact</a>
             <a href="card.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 </div>
