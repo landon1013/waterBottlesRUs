@@ -17,7 +17,7 @@
     	<fieldset>
     		<label><input type="radio" value="Credit" name="payment">Credit Card<div class="cardType"><img src="img/cards.png" alt="cards"></div></label><div class="keepOpen"></div>
     		<span>Card Number</span><br><input type="text" value=" " name="cardNumber" class="number"><br>
-    		<span>Name on Card</span><br><input type="text" value=" " name="cardName" class="name"><br>
+    		<span>Name on Card</span><br><input type="text" value=" " name="cardName" class="nameCard"><br>
     		<div class="cardCCV">
     		<label class="expireL"><span>Card Experation</span><br><input type="text" value=" " name="cardExpire" class="expire"></label><br>
     		

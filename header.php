@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
- <link href="scss/reset.css" rel="stylesheet" type="text/css">
+ <link href="scss/reset.css" rel="stylesheet"  type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
 
    <!-- link font awesome -->
@@ -20,7 +20,7 @@
 $(document).ready(function(){
 var str=location.href.toLowerCase();
 $(".sidenav  .floatNav a").each(function() {
-if (str.indexOf(this.href.toLowerCase()) > -1) {
+if (str.indexOf(this.href.toLowerCase()) > -1)  {
  $("a.active").removeClass("active");
 $(this).addClass("active");
 }
