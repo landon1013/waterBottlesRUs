@@ -13,14 +13,14 @@ $result = mysqli_query($dbconnection, $query) or die ('query failed');
 
 <?php include_once('header.php')?>
     <title>Home</title>
-    
+
   </head>
   <body >
     <?php include_once('nav.php'); ?>
     <div id="home" class="container">
      <div id="main">
       <div class="hero">
-        <a href="shop.html"><div class="btn shop">
+        <a href="shopping.html"><div class="btn shop">
           Shop Now
         </div></a>
       </div>
