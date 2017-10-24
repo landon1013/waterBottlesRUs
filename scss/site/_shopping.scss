@@ -1,0 +1,36 @@
+.shop-container {
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+}
+.shop-container-inner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.shop-item {
+    margin-top:    20px;
+    margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #000;
+
+  .shop-item-img {
+      margin-bottom: 10px;
+  }
+  .shop-item-title {
+      text-align: center;
+  }
+  .shop-item-price {
+      margin-top: 10px;
+      text-align: center;
+      font-weight: 300;
+  }
+  .shop-item-add-item {
+      padding: 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+  }
+}
