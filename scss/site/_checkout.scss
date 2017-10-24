@@ -1,0 +1,110 @@
+//Checkout Scss
+#card{
+	
+	width: 80%;
+	margin: auto;
+  .cardInfo {
+    height: 100vh;
+    width: 100%;
+
+    h2 {
+      line-height: .2;
+      text-align: center;
+      padding: 120px 0;
+      font-size: 40px;
+
+      span {
+        display: inline-block;
+        position: relative;
+
+        &:before, &:after {
+          content: "";
+          position: absolute;
+          height: 5px;
+          border-top: 3px solid #ccc;
+          top: 0;
+          width: 98%;
+        }
+        &:before {
+          right: 100%;
+          margin-right: 15px;
+        }
+        &:after {
+          left: 100%;
+          margin-left: 15px;
+        }// end of &:after
+      }//end of span
+    } // end of h2
+	  .progress{
+		  width: 100%;
+		  margin: 1em auto;
+		  
+		  img{
+			  width: 100%;
+		  }
+	  }
+	  
+	  //----------------------FORM STLYING----------------------
+	  form{
+		  
+		  width: 80%;
+		  margin: auto;
+		  
+		  fieldset{
+		  
+		  input{
+				padding: .5em;
+				margin-bottom: 1.5em;
+			  
+			 
+		  }
+		  label{
+		  	margin: 1em 0;
+		  }
+		  span{
+			  margin-top: 1em;
+		  }
+		  .number{
+			  width: 98%;
+			  border-radius: 5px;
+			  
+		  }// end of numberr
+		  .name{
+			  width: 98%;
+			  border-radius: 5px;
+		  }
+			  
+			  .cardCCV{
+				  width: 100%;
+			  .securityL{
+
+				  width: 48%;
+			  }
+			 
+			  .expireL{
+				  @extend .securityL;
+				  float: right;
+	
+			  }
+		 
+			  }
+			  .payment{
+
+				  
+				  img{
+					  width: 20%;
+				  }
+				    }// end of payment div	
+				  .cardType{
+					  width: 40%;
+					  display: inline-block;
+					  float: right;
+					  img{
+						  width: 100%;
+					  }
+				  }
+			  
+	  }// end of fieldset
+	  }//end form stlying
+	}// end of .card info
+}// end of #card

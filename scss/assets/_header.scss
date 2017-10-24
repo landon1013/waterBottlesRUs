@@ -47,7 +47,7 @@ header{
     padding-top: 60px;
 
 
- a {
+ a, a:visited {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
@@ -64,10 +64,25 @@ header{
     font-size: 36px;
     margin-left: 50px;
 }
+	 a:hover {
+    color: $main-color;
+}
+	a.active {
+    color: $main-color;
+	text-decoration: underline;
+}
+	 a:hover i{
+    color: $main-color;
+}
+	a.active i {
+    color: $main-color;
+	text-decoration: underline;
+}
 }
 
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+
 
 
 
@@ -82,6 +97,23 @@ header{
         width:100%;
         }
     }
+	
+	.sidenav{
+		 a:hover {
+    color: $main-color;
+}
+	a.active {
+    color: $main-color;
+	text-decoration: underline;
+}
+		 a:hover i{
+    color: $main-color;
+}
+	a.active i {
+    color: $main-color;
+	text-decoration: underline;
+}
+	}
 	}
 
 @include responsive(laptopM) {

@@ -31,7 +31,7 @@ header {
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px; }
-  .sidenav a {
+  .sidenav a, .sidenav a:visited {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
@@ -44,6 +44,16 @@ header {
     right: 25px;
     font-size: 36px;
     margin-left: 50px; }
+  .sidenav a:hover {
+    color: #000; }
+  .sidenav a.active {
+    color: #000;
+    text-decoration: underline; }
+  .sidenav a:hover i {
+    color: #000; }
+  .sidenav a.active i {
+    color: #000;
+    text-decoration: underline; }
 
 .sidenav {
   padding-top: 15px; }
@@ -59,7 +69,18 @@ header {
   .logo {
     width: 12%; }
     .logo img {
-      width: 100%; } }
+      width: 100%; }
+
+  .sidenav a:hover {
+    color: #000; }
+  .sidenav a.active {
+    color: #000;
+    text-decoration: underline; }
+  .sidenav a:hover i {
+    color: #000; }
+  .sidenav a.active i {
+    color: #000;
+    text-decoration: underline; } }
 @media only screen and (min-width: 960px) {
   header {
     width: 70%; }
@@ -181,3 +202,66 @@ body {
       line-height: 1.5; }
     #home .about .content img {
       width: 30%; }
+
+#card {
+  width: 80%;
+  margin: auto; }
+  #card .cardInfo {
+    height: 100vh;
+    width: 100%; }
+    #card .cardInfo h2 {
+      line-height: .2;
+      text-align: center;
+      padding: 120px 0;
+      font-size: 40px; }
+      #card .cardInfo h2 span {
+        display: inline-block;
+        position: relative; }
+        #card .cardInfo h2 span:before, #card .cardInfo h2 span:after {
+          content: "";
+          position: absolute;
+          height: 5px;
+          border-top: 3px solid #ccc;
+          top: 0;
+          width: 98%; }
+        #card .cardInfo h2 span:before {
+          right: 100%;
+          margin-right: 15px; }
+        #card .cardInfo h2 span:after {
+          left: 100%;
+          margin-left: 15px; }
+    #card .cardInfo .progress {
+      width: 100%;
+      margin: 1em auto; }
+      #card .cardInfo .progress img {
+        width: 100%; }
+    #card .cardInfo form {
+      width: 80%;
+      margin: auto; }
+      #card .cardInfo form fieldset input {
+        padding: .5em;
+        margin-bottom: 1.5em; }
+      #card .cardInfo form fieldset label {
+        margin: 1em 0; }
+      #card .cardInfo form fieldset span {
+        margin-top: 1em; }
+      #card .cardInfo form fieldset .number {
+        width: 98%;
+        border-radius: 5px; }
+      #card .cardInfo form fieldset .name {
+        width: 98%;
+        border-radius: 5px; }
+      #card .cardInfo form fieldset .cardCCV {
+        width: 100%; }
+        #card .cardInfo form fieldset .cardCCV .securityL, #card .cardInfo form fieldset .cardCCV .expireL {
+          width: 48%; }
+        #card .cardInfo form fieldset .cardCCV .expireL {
+          float: right; }
+      #card .cardInfo form fieldset .payment img {
+        width: 20%; }
+      #card .cardInfo form fieldset .cardType {
+        width: 40%;
+        display: inline-block;
+        float: right; }
+        #card .cardInfo form fieldset .cardType img {
+          width: 100%; }
