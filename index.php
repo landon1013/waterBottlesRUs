@@ -20,7 +20,7 @@ $result = mysqli_query($dbconnection, $query) or die ('query failed');
     <div id="home" class="container">
      <div id="main">
       <div class="hero">
-        <a href="shopping.html"><div class="btn shop">
+        <a href="shopping.php"><div class="btn shop">
           Shop Now
         </div></a>
       </div>
