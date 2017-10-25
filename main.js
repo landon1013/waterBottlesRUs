@@ -31,7 +31,7 @@ if(width <= 960 ){
 	console.log ('this is working');
 }
 else{
- document.getElementById("mySidenav").style.width = "50%";
+ document.getElementById("mySidenav").style.width = "75%";
 }
 });
 
