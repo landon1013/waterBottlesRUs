@@ -1,7 +1,35 @@
+<?php
+if(isset($_POST['submitInfo'])){
+$name = $_POST['fullname'];
+$email = $_POST['email'];
+$phone = $_POST['phone'];
+$address = $_POST['address'];
+$address2 = $_POST['address2'];
+$city = $_POST['city'];
+$state = $_POST['state'];
+$zip = $_POST['zipcode'];
+$bottles = "water Bottle";
+$price = "12.99";
+
+require_once('variables.php');
+
+//BUILD THE DATABASE CONNECTION WITH host, user, pass, database
+$dbconnection = mysqli_connect(HOST,USER,PASSWORD,DB_NAME) or die ('connection failed');
+
+//BUILD THE query
+$query = "INSERT INTO checkout(name, email, phone, address1, address2, city, state, zip, in_cart, shipping_cost) VALUES ('$name','$email','$phone','$address','$address2','$city','$state','$zip','$bottles','$price')";
+
+//NOW TRY AND TALK TO THE database
+$result = mysqli_query($dbconnection, $query) or die ('query failed');
+
+//RETURN TO THE APPROVE PAGE
+header('Location: confirm.php');
+}
+?>
 
 
 <?php include_once('header.php')?>
-    <title>Checkout - Card</title>
+    <title>Checkout - Shipping</title>
     
   </head>
   <body >
@@ -11,11 +39,11 @@
      <div class="nameInfo">
     <h2><span>CHECKOUT</span></h2>
     <div class="progress">
-    	<img src="img/progressBarCheckout@72x.png" alt="progressBar">
+    	<img src="img/progress2.png" alt="progressBar">
     </div>
      <body>
-          <form action="" method="post" enctype="multipart/form-data">
-               <label for="fullname">FULL NAME</label>
+          <form action="form.php" method="post" enctype="multipart/form-data">
+               <label for="fullname" >FULL NAME</label>
                <input id="fullname" type="text" name="fullname" value="">
                <label for="email">EMAIL</label>
                <input id="email" type="email" name="email" value="">
@@ -24,7 +52,7 @@
                <label for="address1">ADDRESS 1</label>
                <input id="address1" type="text" name="address" value="">
                <label for="adress2">ADDRESS 2</label>
-               <input id="address2" type="text" name="address" value="">
+               <input id="address2" type="text" name="address2" value="">
                <label for="city">CITY</label>
                <input id="city" type="text" name="city">
                <label for="state">STATE</label>
@@ -45,7 +73,7 @@
                          <p>(1-3 days)</p>
                     </div>
                </div>
-               <button type="submit" value="Submit">Continue &nbsp; ></button>
+               <button type="submit" value="Submit" name="submitInfo">Continue &nbsp; ></button>
           </form>
 
      </body>

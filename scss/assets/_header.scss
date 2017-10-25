@@ -1,7 +1,8 @@
 .logo{
 
     height: 114px;
-    width: 15%;
+    width: 80px;
+	padding: .5em 1.5em;
 	float: left;
     display: block;
 
@@ -25,7 +26,7 @@
 
 
 header{
-    height: 100px;
+    height: 114px;
     
     span{
         float: right;
@@ -37,8 +38,8 @@ header{
 .sidenav {
     height: 100%;
     width: 0;
-    position: fixed;
     z-index: 1;
+	position: fixed;
     top: 3px;
     right: 3px;
     background-color: white;
@@ -50,7 +51,7 @@ header{
  a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     color: #818181;
     display: block;
     transition: 0.3s;
@@ -77,7 +78,8 @@ header{
         margin: auto
     }
     .logo{
-        width: 12%;
+        width: 95px;
+		height: 114px;
         img{
         width:100%;
         }
@@ -89,6 +91,16 @@ header{
 	
 	header{
 		width: 70%;
+		height: 114px;
+		
+		  .logo{
+		height: 114px;
+		width: 100px;
+        
+        img{
+        width:100%;
+        }
+    }
 		span{
 			display: none;
 			
@@ -100,25 +112,28 @@ header{
 	}
 	.floatNav{
 		float: right;
-		padding: 1em 2em;
+		padding: 0em 1em;
+		margin-bottom: .5em;
 	}
 	.sidenav {
     height: 70px;
-    width:60%;
+    width:70%;
+	position:absolute;
     z-index: 1;
-    top: -36px;
-    right: 3px;
+    top: 54px;
+    right: 128px;
     background-color: white;
     overflow-y: hidden;
     transition: 0.5s;
-    padding-top: 60px;
+    padding-top: .5%;
+	background: transparent;
 
 
  a, a:visited {
 
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 17px;
     color: #818181;
    // display: block;
 	float: left;
