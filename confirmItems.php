@@ -39,6 +39,8 @@ header('Location: confirm.php');
 <?php include_once('header.php')?>
     <title>Checkout - Shipping</title>
     
+    
+    
   </head>
   <body >
     <?php include_once('nav.php'); ?>
@@ -50,7 +52,8 @@ header('Location: confirm.php');
     	<img src="img/progress2.png" alt="progressBar">
     </div>
      <body>
-      
+      <INPUT TYPE=button NAME=addbox VALUE= "Add This Item To My Total" >
+		<INPUT TYPE=button NAME=subbox VALUE= "Subtract This Item From My Total" >
 
      </body>
     
