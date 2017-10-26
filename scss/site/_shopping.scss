@@ -15,10 +15,23 @@
     margin-bottom: 20px;
   padding: 10px;
   border: 1px solid #000;
+	width: 200px;
+	height: 300px;
 
   .shop-item-img {
       margin-bottom: 10px;
+	  width: 100%;
+	  
   }
+	 .add2cart{
+		  color: $main-color;
+		 border: 2px solid $accent-color;
+		 margin-left: 4em;
+		 padding: .5em .5em;
+		 background: white;
+		 
+
+	  }
   .shop-item-title {
       text-align: center;
   }

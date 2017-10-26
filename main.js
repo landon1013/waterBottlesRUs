@@ -15,7 +15,7 @@ function closeNav() {
 
 }
 isClosed = isClosed.addEventListener("click",closeNav);
-	isClicked = isClicked.addEventListener("click", openNav);
+isClicked = isClicked.addEventListener("click", openNav);
 
 var width = $(window).width();
 
