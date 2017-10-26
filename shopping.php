@@ -15,7 +15,6 @@ $query = "SELECT * FROM inventory";
 $result = mysqli_query($dbconnection, $query) or die ('query failed');
 
 
-   
 ?>
    <?php include_once('header.php')?>
     <title>Checkout - Card</title>
@@ -30,13 +29,16 @@ $result = mysqli_query($dbconnection, $query) or die ('query failed');
         <div class="shop-container-inner">
         <?php  
 			while($row = mysqli_fetch_array($result)){
+			
 				echo'
         <div class="shop-item">';
          echo'   <img class="shop-item-img" src= img/main-bottle.png>';
            echo '<h6 class="shop-item-title">'.$row['model'].'</h6>
             <p class="shop-item-price">'.$row['price'].'</p><br>
-            <input type="submit" name="'.$row['model'].'" value="Add to Cart" class="add2cart" isclicked="'.$_SESSION[$row['model'].$row[color]].'">
+            <div  name="'.$row['model'].'" class="viewDetails" isclicked="">View Details</div>
         </div>';
+				
+				//echo $_SESSION[];
 			}
 			
 			?>
