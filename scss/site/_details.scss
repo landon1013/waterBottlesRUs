@@ -1,29 +1,31 @@
-img{
-	    width: 300px;
-    height: 300px;
-    float: left;
-    margin: 20px;
-    border: 1px solid black;
-}
-form{
-
-    width: 80%;
-    margin: auto;
-    padding: 20px;
-}
-h1,h2{
- margin: 10px 0;
-}
-h1{
-	margin-top: 0;
-}
-h2{
+#details {
+	img{
+		    width: 300px;
+	    height: 300px;
+	    float: left;
+	    margin: 20px;
+	    border: 1px solid black;
 	}
-select{
-	border: 1px solid black;
-	   
-}
-h2.yo {
-    font-weight: 100;
-    font-size: 15px;
+	form{
+
+	    width: 80%;
+	    margin: auto;
+	    padding: 20px;
+	}
+	h1,h2{
+	 margin: 10px 0;
+	}
+	h1{
+		margin-top: 0;
+	}
+	h2{
+		}
+	select{
+		border: 1px solid black;
+
+	}
+	h2.yo {
+	    font-weight: 100;
+	    font-size: 15px;
+	}
 }
