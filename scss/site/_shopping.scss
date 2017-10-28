@@ -3,12 +3,22 @@
   display: block;
   margin: 0 auto;
   padding: 20px;
+
+  h2 {
+    font-size: 30px;
+    border-bottom: 3px solid #64cb72;
+    width: 180px;
+    margin: 15px auto 0;
+    text-align: center;
+    padding-bottom: 5px;
+  }
 }
+
 .shop-container-inner {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .shop-item {
     margin-top:    20px;
@@ -21,7 +31,7 @@
   .shop-item-img {
       margin-bottom: 10px;
 	  width: 100%;
-	  
+
   }
 	 .viewDetails{
 		  color: $main-color;
@@ -31,7 +41,7 @@
 		 text-align: center;
 		 width: 60%;
 		 background: white;
-		 
+
 
 	  }
   .shop-item-title {
