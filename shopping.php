@@ -7,7 +7,7 @@ require_once('variables.php');
 //BUILD THE DATABASE CONNECTION WITH host, user, pass, database
 $dbconnection = mysqli_connect(HOST,USER,PASSWORD,DB_NAME) or die ('connection failed');
 //BUILD THE query
-$brand_query = "SELECT DISTINCT(brand) FROM `inventory` ORDER BY 'brand'";
+$brand_query = "SELECT DISTINCT(brand) FROM inventory ORDER BY brand";
 //NOW TRY AND TALK TO THE database
 $result = mysqli_query($dbconnection, $brand_query) or die ('query failed');
 ?>
@@ -23,7 +23,7 @@ $result = mysqli_query($dbconnection, $brand_query) or die ('query failed');
         <?php
 			while($row = mysqli_fetch_array($result)){
         $brand = $row['brand'];
-        $query = "SELECT  id, model, image, price FROM inventory WHERE brand = '$brand' GROUP BY model";
+        $query = "SELECT  id, model, image, price FROM inventory WHERE brand = '$brand' GROUP BY model ORDER BY model";
         $brand_result = mysqli_query($dbconnection, $query) or die ('query failed');
 				echo '<h2>'.$row['brand'].'</h2>';
         echo '<div class="shop-container-inner">';

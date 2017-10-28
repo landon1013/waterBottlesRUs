@@ -45,6 +45,10 @@ $row = mysqli_fetch_array($result);
 				?>
 			</select>
 
+			<p>
+				<?php echo $row['description']; ?>
+			</p>
+
 			<p>In stock.</p>
 			<!-- <div class="description">
 				<p>Cras ultricies ligula sed magna dictum porta. Proin eget tortor risus. Donec rutrum congue leo eget malesuada. Pellentesque in ipsum id orci porta dapibus. Pellentesquuris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada.</p>
