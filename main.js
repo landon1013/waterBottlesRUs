@@ -37,3 +37,11 @@ else{
 
 console.log (width);
 
+
+$('.remove').click(function(){
+
+	//this.parentElement.remove();
+	 $(this).attr("class", "500");
+	
+	console.log (this);
+});

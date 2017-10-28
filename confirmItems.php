@@ -28,18 +28,10 @@ $size = $_SESSION['size'];
 		
 		$_SESSION['id']=$fetch_id['id'];
 			$items =  $_SESSION['id'];
-	
-	if(isset($_SESSION['cart'][$fetch_id['id']])){
-				$_SESSION['cart'][$fetch_id['id']]++;
-			
-		}
-	
-else{
-	
-	$_SESSION['cart'][$fetch_id['id']]=1;
-}	
+	$_SESSION['cart'][$fetch_id['id']]=0;
 
 
+	 
 
 		
 
@@ -67,45 +59,70 @@ else{
      <?php 
 		 
 			
-	$max = count( $items );		
+	$max = count( $items );	
+		 
+		 
+		 
+			if(isset($_SESSION['cart'][$fetch_id['id']])){
+						$_SESSION['cart'][$fetch_id['id']]++;
+								}
+
+						else{
+
+							$_SESSION['cart'][$fetch_id['id']]=0;
+						}
 		
-		 for( $i = 0; $i < $max; $i++ )
-{
+			 
+	
+
 	 
 		 foreach($_SESSION['cart'] as $items => $count){
+					
+			 
+			 
 
 			 $display = "SELECT * FROM inventory WHERE id='$items'";
 			 $select = mysqli_query($dbconnection, $display) or die ('select query failed');
-			 
 			$print = mysqli_fetch_array($select);
+			 
+			 $delete = $print['id'];
+			 
 		
+			 
+			
+			 echo '<div class="cartDisplay" id="#delete">';
+			 echo '<img src="img/'.$print['image'].'"/>';
 			echo '<h1>'.$print['brand'].'</h1>';
 			echo '<h1>'.$print['model'].'</h1>';
 			echo '<p> Size:'.$print['size'].'    Color:'.$print['color'].'</p>';
-				echo '<form method="post" ><input type="submit" class="remove" value="remove"  name="remove"></form>';
-		 
-	
+			 echo '<p> Price: '.$print['price'].'</p>';
+				echo '<a class="remove"  href="remove.php?id='.$print['id'].'">Remove</a>';
+		 		echo '</div>';
 		
+			 		
+							
+			
+				
 		
+		 print $delete.'inloop';
+			  	
+		 	
 		
-		
+			
+			 	
 		 }
-	
-			  
-		 	 
-		
-		
-}//end of for statement
-	
-		 	 	if(isset($_POST['remove'])){
-					$key = $print['id'];
-					unset($_SESSION["cart"][$fetch_id['id']]);
-					echo '<p> function is running </p>'.$count;
-				}
-	else{
-		echo 'function is not running';
-	}
+		 print $delete;
 		 
+		/*     if($_GET['remove'] == '500'){
+                    
+				
+            unset($_SESSION['cart'][$delete]);
+            echo $delete.' was removed <br>';
+} 
+            else{
+                echo 'function is not running';
+            }
+		*/
 		 
 		 ?>
 

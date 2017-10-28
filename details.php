@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once('variables.php');
 $model = $_GET[model];
 
@@ -44,7 +45,8 @@ $row = mysqli_fetch_array($result);
 				}
 				?>
 			</select>
-			<?php 		$brand = $row['brand'];
+			<?php 
+			$brand = $row['brand'];
 			$models = $row['model'];
 			
 
@@ -52,7 +54,7 @@ $row = mysqli_fetch_array($result);
 			$_SESSION['brand']= $brand;?>
 
 			<p>
-				<?php echo $row['description']; ?>
+				<?php //echo $row['description']; ?>
 			</p>
 
 			<p>In stock.</p>
