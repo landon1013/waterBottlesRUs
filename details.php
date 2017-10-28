@@ -24,26 +24,32 @@ $row = mysqli_fetch_array($result);
 	<?php include_once('nav.php'); ?>
 	<div id="details">
 		<img src="img/<?php echo $row['image'] ?>"  />
-		<form>
+		<form method="post" action="confirmItems.php">
 			<h1><?php echo $row['brand'] ?></h1>
 			<h2><?php echo $row['model'] ?></h2>
 			<h2 class="yo">Size</h2>
-			<select>
+			<select name="getSize">
 				<?php
 				while($row2 = mysqli_fetch_array($size_result)) {
-					echo '<option>' . $row2[size] . '</option>';
+					echo '<option value="'.$row2['size'].'">' . $row2[size] . '</option>';
 				}
 				?>
 			</select>
 
 			<h2 class="yo">Color</h2>
-			<select>
+			<select name="getColor">
 				<?php
 				while($row2 = mysqli_fetch_array($color_result)) {
-					echo '<option>' . $row2[color] . '</option>';
+					echo '<option value = "'.$row2['color'].'">' . $row2['color'] . '</option>';
 				}
 				?>
 			</select>
+			<?php 		$brand = $row['brand'];
+			$models = $row['model'];
+			
+
+			$_SESSION['model'] = $model;
+			$_SESSION['brand']= $brand;?>
 
 			<p>
 				<?php echo $row['description']; ?>
@@ -53,7 +59,10 @@ $row = mysqli_fetch_array($result);
 			<!-- <div class="description">
 				<p>Cras ultricies ligula sed magna dictum porta. Proin eget tortor risus. Donec rutrum congue leo eget malesuada. Pellentesque in ipsum id orci porta dapibus. Pellentesquuris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada.</p>
 			</div> -->
+			<input type="submit" class="addCart" name="addCart"	value="Add to Cart">
+			
 		</form>
 	</div>
 </body>
 </html>
+
