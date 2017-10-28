@@ -34,7 +34,7 @@ $result = mysqli_query($dbconnection, $brand_query) or die ('query failed');
               <img class="shop-item-img" src= img/' . $row2['image'] . '>
               <h6 class="shop-item-title">' . $row2['model'] . '</h6>
               <p class="shop-item-price">' . $row2['price'] . '</p><br>
-              <div  name="' . $row2['model'] . '" class="viewDetails" isclicked="">View Details</div>
+              <div  name="' . $row2['model'] . '" class="btn viewDetails" isclicked="">View Details</div>
             </div>
           </a>';
 				//echo $_SESSION[];

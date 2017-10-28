@@ -23,6 +23,9 @@ $row = mysqli_fetch_array($result);
 <body>
 	<?php include_once('nav.php'); ?>
 	<div id="details">
+		<a href="shopping.php"><div class="btn back">
+			Back to Shop
+		</div></a>
 		<img src="img/<?php echo $row['image'] ?>"  />
 		<form method="post" action="confirmItems.php">
 			<h1><?php echo $row['brand'] ?></h1>
@@ -46,7 +49,7 @@ $row = mysqli_fetch_array($result);
 			</select>
 			<?php 		$brand = $row['brand'];
 			$models = $row['model'];
-			
+
 
 			$_SESSION['model'] = $model;
 			$_SESSION['brand']= $brand;?>
@@ -59,10 +62,9 @@ $row = mysqli_fetch_array($result);
 			<!-- <div class="description">
 				<p>Cras ultricies ligula sed magna dictum porta. Proin eget tortor risus. Donec rutrum congue leo eget malesuada. Pellentesque in ipsum id orci porta dapibus. Pellentesquuris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada.</p>
 			</div> -->
-			<input type="submit" class="addCart" name="addCart"	value="Add to Cart">
-			
+			<input type="submit" class="btn addCart" name="addCart"	value="Add to Cart">
+
 		</form>
 	</div>
 </body>
 </html>
-
