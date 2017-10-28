@@ -1,38 +1,50 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Untitled Document</title>
-</head>
-
-<body>
-</body><?php
-if(isset($_POST['submitInfo'])){
-$name = $_POST['fullname'];
-$email = $_POST['email'];
-$phone = $_POST['phone'];
-$address = $_POST['address'];
-$address2 = $_POST['address2'];
-$city = $_POST['city'];
-$state = $_POST['state'];
-$zip = $_POST['zipcode'];
-$bottles = "water Bottle";
-$price = "12.99";
-
-require_once('variables.php');
-
-//BUILD THE DATABASE CONNECTION WITH host, user, pass, database
-$dbconnection = mysqli_connect(HOST,USER,PASSWORD,DB_NAME) or die ('connection failed');
-
-//BUILD THE query
-$query = "INSERT INTO checkout(name, email, phone, address1, address2, city, state, zip, in_cart, shipping_cost) VALUES ('$name','$email','$phone','$address','$address2','$city','$state','$zip','$bottles','$price')";
-
-//NOW TRY AND TALK TO THE database
-$result = mysqli_query($dbconnection, $query) or die ('query failed');
-
-//RETURN TO THE APPROVE PAGE
-header('Location: confirm.php');
+<?php
+session_start();
+if(isset($_POST['addCart'])){
+$getColor = $_POST['getColor'];
+$getSize = $_POST['getSize'];
+$_SESSION['color'] = $getColor;
+$_SESSION['size'] = $getSize;
 }
+
+$model = $_SESSION['model'];
+$brand = $_SESSION['brand'];
+$color = $_SESSION['color'];
+$size = $_SESSION['size'];
+
+	
+		require_once('variables.php');
+
+		//BUILD THE DATABASE CONNECTION WITH host, user, pass, database
+		$dbconnection = mysqli_connect(HOST,USER,PASSWORD,DB_NAME) or die ('connection failed');
+
+		$id_query = "SELECT * FROM inventory WHERE  model = '$model' AND size = '$size' AND color = '$color'";
+			
+		$item_id = mysqli_query($dbconnection, $id_query) or die ('id query failed');
+
+		$fetch_id  = mysqli_fetch_array($item_id);
+		
+	
+		
+		$_SESSION['id']=$fetch_id['id'];
+			$items =  $_SESSION['id'];
+	
+	if(isset($_SESSION['cart'][$fetch_id['id']])){
+				$_SESSION['cart'][$fetch_id['id']]++;
+			
+		}
+	
+else{
+	
+	$_SESSION['cart'][$fetch_id['id']]=1;
+}	
+
+
+
+		
+
+
+
 ?>
 
 
@@ -51,9 +63,51 @@ header('Location: confirm.php');
     <div class="progress">
     	<img src="img/progress2.png" alt="progressBar">
     </div>
-     <body>
-      <INPUT TYPE=button NAME=addbox VALUE= "Add This Item To My Total" >
-		<INPUT TYPE=button NAME=subbox VALUE= "Subtract This Item From My Total" >
+  
+     <?php 
+		 
+			
+	$max = count( $items );		
+		
+		 for( $i = 0; $i < $max; $i++ )
+{
+	 
+		 foreach($_SESSION['cart'] as $items => $count){
+
+			 $display = "SELECT * FROM inventory WHERE id='$items'";
+			 $select = mysqli_query($dbconnection, $display) or die ('select query failed');
+			 
+			$print = mysqli_fetch_array($select);
+		
+			echo '<h1>'.$print['brand'].'</h1>';
+			echo '<h1>'.$print['model'].'</h1>';
+			echo '<p> Size:'.$print['size'].'    Color:'.$print['color'].'</p>';
+				echo '<form method="post" ><input type="submit" class="remove" value="remove"  name="remove"></form>';
+		 
+	
+		
+		
+		
+		
+		 }
+	
+			  
+		 	 
+		
+		
+}//end of for statement
+	
+		 	 	if(isset($_POST['remove'])){
+					$key = $print['id'];
+					unset($_SESSION["cart"][$fetch_id['id']]);
+					echo '<p> function is running </p>'.$count;
+				}
+	else{
+		echo 'function is not running';
+	}
+		 
+		 
+		 ?>
 
      </body>
     
