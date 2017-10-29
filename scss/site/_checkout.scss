@@ -1,3 +1,91 @@
+//for all forms
+#incrament{
+	font-size: 1.5em;
+	color: #cccccc;
+	float: left;
+	padding: 0 .7em;
+	
+}
+	
+	.counter{
+		font-size: .8em;
+		width: 0;
+		height: 0;
+	}
+.cartButton {
+    background: $accent-color;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 5px 15px;
+    /* margin: auto; */
+    /* display: block; */
+    float: right;
+    margin-top: 40px;
+}
+
+hr{
+	width: 100%;
+}
+// DETAIL ITEMS IN CART
+.headerDisplay{
+	width: 75%;
+	float: right;
+
+.title{
+		float: left;
+		width: 9%;
+		margin-left: 9em;
+		font-size: 11px;
+		color: #cccccc;
+		margin-top: 5em;
+	}
+}// end of header display
+
+.cartDisplay{
+	display: flex;
+	margin: auto;
+	
+	#button{
+		width: 3%	
+		}
+	.column{
+		margin: 4em auto;
+		width: 18%;
+		float: left;
+		//margin-right: 10%;
+		//margin-top: 3.5em;
+		
+	img{
+		width: 100%;
+		border:  1.5px solid #CCCCCC;
+		
+	}
+		h1{
+			font-size: 1em;
+			color: #cccccc;
+			padding: 1em;
+		}
+		
+		p{
+		text-align: center;
+			padding-bottom: .5em;
+			font-size: .7em;
+	
+}
+		.remove{
+			font-size: 2em;
+			color: #cccccc;
+			
+			i{
+				float: right;
+			}
+		}
+	}
+	
+
+}
 //Checkout Scss
 #card{
 	
