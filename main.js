@@ -37,11 +37,23 @@ else{
 
 console.log (width);
 
+var quantity = 1;
 
-$('.remove').click(function(){
+$('.minus').click(function(){
 
-	//this.parentElement.remove();
-	 $(this).attr("class", "500");
+	quantity --;
+		$('.counter').children().children().html(quantity);
+		$('.counter').html(quantity);
 	
-	console.log (this);
+	
+	console.log(quantity);
+});
+
+$('.plus').click(function(){
+	
+	quantity ++;
+		$('.counter').html(quantity);
+	
+	
+	console.log(quantity);
 });

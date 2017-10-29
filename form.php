@@ -73,7 +73,7 @@ header('Location: confirm.php');
                          <p>(1-3 days)</p>
                     </div>
                </div>
-               <button type="submit" value="Submit" name="submitInfo">Continue &nbsp; ></button>
+               <div type="submit" value="Submit" name="submitInfo" class="cartButton"><a href="card.php">Continue &nbsp; </a></button>
           </form>
 
      </body>
