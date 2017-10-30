@@ -52,6 +52,8 @@ $body = "Got it! your order of an  ".$_SESSION['model'].' '.$_SESSION['brand']."
     <div id="home" class="container">
      <div id="main">
      <p>Thanks for visiting Water Bottles R Us! Your order is being proccessed! You will hear from us soon!</p>
+     <a href="shopping.php">Back to Shopping</a>
+     <a href="contact.php">Contact Us</a>
    
     </div> <!-- end of main div -->
 </div> <!-- end of container div -->
