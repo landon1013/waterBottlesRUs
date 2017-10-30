@@ -23,6 +23,7 @@
     /* display: block; */
     float: right;
     margin-top: 40px;
+	margin-bottom: 16em;
 }
 
 hr{
@@ -164,15 +165,18 @@ hr{
 			  
 			  .cardCCV{
 				  width: 100%;
-			  .securityL{
-
-				  width: 48%;
-			  }
+				  display: flex;
+				  flex-direction: row;
 			 
-			  .expireL{
-				  @extend .securityL;
-				  float: right;
-	
+			 
+			  .expire{
+				width: 90%;
+				margin-right:16em;
+			  }
+				   .security{
+				
+				@extend .expire;
+					   
 			  }
 		 
 			  }
@@ -190,7 +194,13 @@ hr{
 					  img{
 						  width: 100%;
 					  }
+					  
+					 
 				  }
+			   .nameCard, .billing, .city, .state, .zip{
+						  width: 100%;
+					  }
+			
 			  
 	  }// end of fieldset
 	  }//end form stlying

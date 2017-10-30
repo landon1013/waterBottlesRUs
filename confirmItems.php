@@ -5,6 +5,7 @@ $getColor = $_POST['getColor'];
 $getSize = $_POST['getSize'];
 $_SESSION['color'] = $getColor;
 $_SESSION['size'] = $getSize;
+
 }
 
 $model = $_SESSION['model'];
@@ -58,41 +59,47 @@ $size = $_SESSION['size'];
     </div>
   
      <?php 
-		 
+		 $_SESSION['cart'][$fetch_id['id']]=0;
 			
 	$max = count( $items );	
 		 
 		 
-		 
+		/* 
 			if(isset($_SESSION['cart'][$fetch_id['id']])){
-						$_SESSION['cart'][$fetch_id['id']]++;
-								}
+				$_SESSION['cart'][$fetch_id['id']]++;
+				print_r ($_SESSION['cart'][$fetch_id['id']]);			
 		 				
-						else{
+			}else{
 
-							$_SESSION['cart'][$fetch_id['id']]=1;
+				//$_SESSION['cart'][$fetch_id['id']]=1;
+				//print_r ($_SESSION['cart'][$fetch_id['id']]);	
 							
-						}
+			}*/
 		
-			 
-				echo '<div class="headerDisplay">';
-		 		echo '<p class="title">Name:</p>';
-				 echo '<p class="title">Price:</p>';
-				 echo '<p class="title">quantitiy:</p>';
-				 echo '<div class="keepOpen"></div>';
-		 		echo '</div>';
-				 echo '<hr class="fullscreen">';
-	 
+			 ?>
+				<div class="headerDisplay">
+		 		<p class="title">Name:</p>
+				<p class="title">Price:</p>
+				<p class="title">quantitiy:</p>
+				<div class="keepOpen"></div>
+		 		</div>
+				<hr class="fullscreen">
+	 <?php
 		 foreach($_SESSION['cart'] as $items => $count){
+			
+			if(isset($_SESSION['cart'][$fetch_id['id']])){
+				$_SESSION['cart'][$fetch_id['id']]++;
+				print_r ($_SESSION['cart'][$fetch_id['id']]);			
+		 				
 					
 			 
 			 
 
-			 $display = "SELECT * FROM inventory WHERE id='$items'";
-			 $select = mysqli_query($dbconnection, $display) or die ('select query failed');
+			$display = "SELECT * FROM inventory WHERE id='$items'";
+			$select = mysqli_query($dbconnection, $display) or die ('select query failed');
 			$print = mysqli_fetch_array($select);
 			 
-			 $delete = $print['id'];
+			$delete = $print['id'];
 			 
 		
 			 
@@ -101,7 +108,9 @@ $size = $_SESSION['size'];
 		
 			 echo '<div class="column" id="button">';
 			 echo '<a class="remove"  href="remove.php?id='.$print['id'].'"><i class="fa fa-times-circle" aria-hidden="true"></i></a>';
+		
 			 echo '</div>';
+
 			 
 			 echo '<div class="column" id="#img">';
 			 echo '<img src="img/'.$print['image'].'"/>';
@@ -115,17 +124,23 @@ $size = $_SESSION['size'];
 			 
 			 echo '<div class="column" id="#img">';
 				
-			 echo '<p> Price: '.$print['price'].'</p>';
+			 echo '<p id="Price"> Price: '.$print['price'].'</p>';
 			 echo '</div>';
 			 
 			  echo '<div class="column" id="#img">';
-				
-			 echo '<p id="incrament"><a id="minus" class="minus"><i class="fa fa-minus-square" aria-hidden="true"></i></a></p><div class="counter">1</div><p id="incrament" ><a id="plus" class="plus"><i class="fa fa-plus-square" aria-hidden="true"></i></a></p>';
+					 echo '<input type="number" placeholder="1" step="1" min="0" max="100" id="number">';
+			// echo '<p id="incrament"><a id="minus" class="minus"><i class="fa fa-minus-square" aria-hidden="true"></i></a></p><div class="counter">1</div><p id="incrament" ><a id="plus" class="plus"><i class="fa fa-plus-square" aria-hidden="true"></i></a></p>';
 			 echo '</div>';
 		 		echo '</div>';
 			 echo '<div class="keepOpen"></div>';
-			
 		
+			} elseif($_SESSION['cart'][$fetch_id['id']]=1){
+				echo "Cart is empty";
+
+				
+				//print_r ($_SESSION['cart'][$fetch_id['id']]);	
+							
+			}
 			 		
 							
 			
@@ -152,6 +167,8 @@ $size = $_SESSION['size'];
 		*/
 		 
 		 ?>
+		 
+ 
      <div><a href="form.php" class="cartButton">Continue &nbsp;</a></div>
 
      </body>
