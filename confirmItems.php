@@ -101,7 +101,9 @@ $size = $_SESSION['size'];
 		
 			 echo '<div class="column" id="button">';
 			 echo '<a class="remove"  href="remove.php?id='.$print['id'].'"><i class="fa fa-times-circle" aria-hidden="true"></i></a>';
+		
 			 echo '</div>';
+
 			 
 			 echo '<div class="column" id="#img">';
 			 echo '<img src="img/'.$print['image'].'"/>';
@@ -119,8 +121,8 @@ $size = $_SESSION['size'];
 			 echo '</div>';
 			 
 			  echo '<div class="column" id="#img">';
-				
-			 echo '<p id="incrament"><a id="minus" class="minus"><i class="fa fa-minus-square" aria-hidden="true"></i></a></p><div class="counter">1</div><p id="incrament" ><a id="plus" class="plus"><i class="fa fa-plus-square" aria-hidden="true"></i></a></p>';
+					 echo '<input type="number" placeholder="1" step="1" min="0" max="100" id="number">';
+			// echo '<p id="incrament"><a id="minus" class="minus"><i class="fa fa-minus-square" aria-hidden="true"></i></a></p><div class="counter">1</div><p id="incrament" ><a id="plus" class="plus"><i class="fa fa-plus-square" aria-hidden="true"></i></a></p>';
 			 echo '</div>';
 		 		echo '</div>';
 			 echo '<div class="keepOpen"></div>';

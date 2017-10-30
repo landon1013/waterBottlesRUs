@@ -37,23 +37,4 @@ else{
 
 console.log (width);
 
-var quantity = 1;
 
-$('.minus').click(function(){
-
-	quantity --;
-		$('.counter').children().children().html(quantity);
-		$('.counter').html(quantity);
-	
-	
-	console.log(quantity);
-});
-
-$('.plus').click(function(){
-	
-	quantity ++;
-		$('.counter').html(quantity);
-	
-	
-	console.log(quantity);
-});

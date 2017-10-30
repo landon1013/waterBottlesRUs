@@ -1,4 +1,5 @@
 <?php
+session_start();
 if(isset($_POST['submitInfo'])){
 $name = $_POST['fullname'];
 $email = $_POST['email'];
@@ -23,7 +24,9 @@ $query = "INSERT INTO checkout(name, email, phone, address1, address2, city, sta
 $result = mysqli_query($dbconnection, $query) or die ('query failed');
 
 //RETURN TO THE APPROVE PAGE
-header('Location: confirm.php');
+header('Location: card.php');
+	$_SESSION['email'] = $email;
+	$_SESSION['name'] = $name;
 }
 ?>
 
@@ -73,7 +76,7 @@ header('Location: confirm.php');
                          <p>(1-3 days)</p>
                     </div>
                </div>
-               <div type="submit" value="Submit" name="submitInfo" class="cartButton"><a href="card.php">Continue &nbsp; </a></button>
+               <input type="submit" value="Submit" name="submitInfo" class="cartButton">
           </form>
 
      </body>
