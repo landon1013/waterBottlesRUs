@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_POST['submitInfo'])){
+
 $name = $_POST['cardName'];
 $number = $_POST['cardNumber'];
 $ccv = $_POST['cardSecurity'];
@@ -25,9 +25,7 @@ $query = "INSERT INTO cc_info( number, cvv, date, name, billing, city, state, zi
 $result = mysqli_query($dbconnection, $query) or die ('query failed');
 
 
-	
-	
-}
+
 
 $email = $_SESSION['email'];
 
@@ -71,8 +69,6 @@ $body = "Got it! your order of an  ".$_SESSION['model'].' '.$_SESSION['brand']."
 	  } else {
 			echo 'Error: something went wrong.';
 		  }
-
-		session_unset('cardNum');
 
 
 ?>
