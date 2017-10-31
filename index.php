@@ -27,9 +27,9 @@ $result = mysqli_query($dbconnection, $query) or die ('query failed');
       <div class="about">
         <h2><span>ABOUT US</span></h2>
         <div class="content">
-          <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad Lorem ipsum dolor sit amet,
-          </p>
+        <p> Mission statement: Sell products that have a positive, long-term, impact on the lives of our customers and the health of our planet; support our employees and community, and those of our suppliers, by keeping our manufacturing in Colorado and sourcing USA-Made materials for our products.</p>
+
+        <p>At Water Bottles R Us, we want to make sure the products you buy are top-notch. We understand that people from all walks of life have varying needs and our bottles have been designed with this in mind. Whether it's on the go, at home, or in the mountains, waterBottlesRUs has you covered.</p>
           <img src="img/main-bottle.png" />
         </div>
       </div>

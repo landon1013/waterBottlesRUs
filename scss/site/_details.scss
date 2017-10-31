@@ -1,4 +1,15 @@
 #details {
+	    margin: 0 auto;
+			padding-top: 20px;
+	    width: 70%;
+
+			.back {
+				float: right;
+				font-size: 12px;
+				padding: 5px;
+				width: 90px;
+			}
+
 	img {
 		width: 300px;
 		height: 300px;
@@ -9,9 +20,15 @@
 	}
 
 	form {
-		width: 80%;
 		margin: auto;
 		padding: 20px;
+
+		.addCart {
+			background: white;
+	    font-size: 16px;
+	    padding: 10px 20px;
+	    width: auto;
+		}
 	}
 
 	h1,h2 {
@@ -32,6 +49,6 @@
 	}
 
 	p {
-		margin-top: 15px;
+		margin: 15px 0;
 	}
 }

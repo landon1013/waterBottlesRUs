@@ -67,12 +67,16 @@ $size = $_SESSION['size'];
 	 
 		<?php
 			$amount = 0;
-			
+			 if(isset($_SESSION['cart'][$fetch_id['id']])){
+					$_SESSION['cart'][$fetch_id['id']]++;
+			 }
+		 elseif($_SESSION['cart'][$fetch_id['id']]==0){
+				echo "Cart is empty";
+		 }
 
 			 foreach($_SESSION['cart'] as $items => $count){
 
-			 if(isset($_SESSION['cart'][$fetch_id['id']])){
-					$_SESSION['cart'][$fetch_id['id']]++;
+			
 
 		 				
 					
@@ -121,13 +125,12 @@ $size = $_SESSION['size'];
 		 		echo '</div>';
 			 echo '<div class="keepOpen"></div>';
 		
-			} elseif($_SESSION['cart'][$fetch_id['id']]==0){
-				echo "Cart is empty";
+			
 
 				
 		
 							
-			}
+			
 			
 
 		
