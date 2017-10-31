@@ -39,7 +39,8 @@ $body = "Got it! your order of an  ".$_SESSION['model'].' '.$_SESSION['brand']."
   $subject = "Confirmation Email"; //subject
   $header = "From: ". $sender . " <" . $to . ">\r\n";
 	
-	  if (mail($email, $subject, $body, $header)){
+	 // if (mail($email, $subject, $body, $header)){
+	  if (true){
 		include'thanks.php';
 
 	  	session_destroy();
