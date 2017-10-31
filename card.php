@@ -25,7 +25,7 @@ $query = "INSERT INTO cc_info( number, cvv, date, name, billing, city, state, zi
 $result = mysqli_query($dbconnection, $query) or die ('query failed');
 
 
-	header("Location: thanks.php");
+	
 	
 }
 ?>
@@ -43,7 +43,7 @@ $result = mysqli_query($dbconnection, $query) or die ('query failed');
     <div class="progress">
     	<img src="img/progressBarCheckout@72x.png" alt="progressBar">
     </div>
-    <form action="card.php" enctype="multipart/form-data" method="post">
+    <form action="thanks.php" enctype="multipart/form-data" method="post">
     	<fieldset>
     		<label><input type="radio" value="Credit" name="payment">Credit Card<div class="cardType"><img src="img/cards.png" alt="cards"></div></label><div class="keepOpen"></div>
     		<span>Card Number</span><br><input type="text" value=" " name="cardNumber" class="number"><br>
