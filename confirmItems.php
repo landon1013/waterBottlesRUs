@@ -25,18 +25,14 @@ $size = $_SESSION['size'];
 
 		$fetch_id  = mysqli_fetch_array($item_id);
 		
-		$empty_cart = "SELECT * FROM inventory WHERE id='0'";
-		$displayEmpty = mysqli_query($dbconnection, $empty_cart) or die ('empty cart failed');
-		$empty = mysqli_fetch_array($displayEmpty);
+		
 		
 		$_SESSION['id']=$fetch_id['id'];
 			$items =  $_SESSION['id'];
 	
 
 	 
-
-		
-
+	
 
 
 ?>
@@ -58,25 +54,9 @@ $size = $_SESSION['size'];
     	<img src="img/progress1@72x.png" alt="progressBar">
     </div>
   
-     <?php 
-		 $_SESSION['cart'][$fetch_id['id']]=0;
-			
-	$max = count( $items );	
-		 
-		 
-		/* 
-			if(isset($_SESSION['cart'][$fetch_id['id']])){
-				$_SESSION['cart'][$fetch_id['id']]++;
-				print_r ($_SESSION['cart'][$fetch_id['id']]);			
-		 				
-			}else{
-
-				//$_SESSION['cart'][$fetch_id['id']]=1;
-				//print_r ($_SESSION['cart'][$fetch_id['id']]);	
-							
-			}*/
-		
-			 ?>
+     <?php $_SESSION['cart'][$fetch_id['id']]=0;?>
+     
+     
 				<div class="headerDisplay">
 		 		<p class="title">Name:</p>
 				<p class="title">Price:</p>
@@ -84,12 +64,16 @@ $size = $_SESSION['size'];
 				<div class="keepOpen"></div>
 		 		</div>
 				<hr class="fullscreen">
-	 <?php
-		 foreach($_SESSION['cart'] as $items => $count){
+	 
+		<?php
+			$amount = 0;
 			
-			if(isset($_SESSION['cart'][$fetch_id['id']])){
-				$_SESSION['cart'][$fetch_id['id']]++;
-				print_r ($_SESSION['cart'][$fetch_id['id']]);			
+
+			 foreach($_SESSION['cart'] as $items => $count){
+
+			 if(isset($_SESSION['cart'][$fetch_id['id']])){
+					$_SESSION['cart'][$fetch_id['id']]++;
+
 		 				
 					
 			 
@@ -128,19 +112,26 @@ $size = $_SESSION['size'];
 			 echo '</div>';
 			 
 			  echo '<div class="column" id="#img">';
-					 echo '<input type="number" placeholder="1" step="1" min="0" max="100" id="number">';
+				
+					 echo '<input type="number" name="amount" placeholder="1" step="1" min="0" max="100" id="number">';
+				
+				
 			// echo '<p id="incrament"><a id="minus" class="minus"><i class="fa fa-minus-square" aria-hidden="true"></i></a></p><div class="counter">1</div><p id="incrament" ><a id="plus" class="plus"><i class="fa fa-plus-square" aria-hidden="true"></i></a></p>';
 			 echo '</div>';
 		 		echo '</div>';
 			 echo '<div class="keepOpen"></div>';
 		
-			} elseif($_SESSION['cart'][$fetch_id['id']]=1){
+			} elseif($_SESSION['cart'][$fetch_id['id']]==0){
 				echo "Cart is empty";
 
 				
-				//print_r ($_SESSION['cart'][$fetch_id['id']]);	
+		
 							
 			}
+			
+
+		
+			 
 			 		
 							
 			
@@ -154,17 +145,7 @@ $size = $_SESSION['size'];
 			 	
 		 }
 		 
-		 
-		/*     if($_GET['remove'] == '500'){
-                    
-				
-            unset($_SESSION['cart'][$delete]);
-            echo $delete.' was removed <br>';
-} 
-            else{
-                echo 'function is not running';
-            }
-		*/
+
 		 
 		 ?>
 		 
