@@ -1,33 +1,6 @@
 <?php
 session_start();
-if(isset($_POST['submitInfo'])){
-$name = $_POST['cardName'];
-$number = $_POST['cardNumber'];
-$ccv = $_POST['cardSecurity'];
-$date = $_POST['cardExpire'];
-$billing = $_POST['billing'];
-$city = $_POST['city'];
-$state = $_POST['state'];
-$zip = $_POST['zip'];
 
-	$_SESSION['cardNum'] = $number;
-	
-
-require_once('variables.php');
-
-//BUILD THE DATABASE CONNECTION WITH host, user, pass, database
-$dbconnection = mysqli_connect(HOST,USER,PASSWORD,DB_NAME) or die ('connection failed');
-
-//BUILD THE query
-$query = "INSERT INTO cc_info( number, cvv, date, name, billing, city, state, zip) VALUES ('$number','$ccv','$date', '$name', '$billing','$city','$state','$zip')";
-
-//NOW TRY AND TALK TO THE database
-$result = mysqli_query($dbconnection, $query) or die ('query failed');
-
-
-	
-	
-}
 ?>
 
 <?php include_once('header.php')?>
@@ -43,7 +16,7 @@ $result = mysqli_query($dbconnection, $query) or die ('query failed');
     <div class="progress">
     	<img src="img/progressBarCheckout@72x.png" alt="progressBar">
     </div>
-    <form action="card.php" enctype="multipart/form-data" method="post">
+    <form action="thanks.php" enctype="multipart/form-data" method="post">
     	<fieldset>
     		<label><input type="radio" value="Credit" name="payment">Credit Card<div class="cardType"><img src="img/cards.png" alt="cards"></div></label><div class="keepOpen"></div>
     		<span>Card Number</span><br><input type="text" value=" " name="cardNumber" class="number"><br>
