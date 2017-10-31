@@ -41,7 +41,8 @@ $body = "Got it! your order of an  ".$_SESSION['model'].' '.$_SESSION['brand']."
 	
 	 // if (mail($email, $subject, $body, $header)){
 	  if (true){
-		include'thanks.php';
+		//include'thanks.php';
+		  echo 'hello world';
 
 	  	session_destroy();
 
@@ -71,8 +72,8 @@ $body = "Got it! your order of an  ".$_SESSION['model'].' '.$_SESSION['brand']."
 			echo 'Error: something went wrong.';
 		  }
 
-
-?>
+*/
+?> 
  <?php include_once('header.php');?>
     <title>Checkout - Card</title>
     
