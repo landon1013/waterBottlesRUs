@@ -32,7 +32,7 @@ $result = mysqli_query($dbconnection, $query) or die ('query failed');
 }
 
 
-if($number == 123456789101112){
+
 $email = $_SESSION['email'];
 $name = $_SESSION['name'];
 $body = "Got it! your order of an  ".$_SESSION['model'].' '.$_SESSION['brand']." has been processed! Your order will be on its way soon!!";
@@ -49,10 +49,10 @@ $body = "Got it! your order of an  ".$_SESSION['model'].' '.$_SESSION['brand']."
   } else {
 		echo 'Error: something went wrong.';
 	  }
-
+/*
 		session_unset('cardNum');
 
-} else{
+
 	$email = $_SESSION['email'];
 	$name = $_SESSION['name'];
 	$body = "Sorry your order of an  ".$_SESSION['model'].' '.$_SESSION['brand']." was not proccessed! Please try a different payment method!!";
@@ -71,10 +71,10 @@ $body = "Got it! your order of an  ".$_SESSION['model'].' '.$_SESSION['brand']."
 		  }
 	
 		session_unset('cardNum');
-}
+*/
 
 ?>
-<?php include_once('header.php')?>
+ <?php include_once('header.php');?>
     <title>Checkout - Card</title>
     
   </head>
