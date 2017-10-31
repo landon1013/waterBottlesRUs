@@ -1,6 +1,6 @@
 
 
-<?php include_once('header.php')?>
+<?php include_once('header.php') echo 'I hate my life!!';?>
     <title>Checkout - Card</title>
     
   </head>
