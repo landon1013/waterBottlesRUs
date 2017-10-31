@@ -41,15 +41,38 @@ $body = "Got it! your order of an  ".$_SESSION['model'].' '.$_SESSION['brand']."
 	
 	  if (mail($email, $subject, $body, $header)){
 		include'thanks.php';
+
 	  	session_destroy();
+
+	  
+  } else {
+		echo 'Error: something went wrong.';
+	  }
+/*
+		session_unset('cardNum');
+
+
+	$email = $_SESSION['email'];
+	$name = $_SESSION['name'];
+	$body = "Sorry your order of an  ".$_SESSION['model'].' '.$_SESSION['brand']." was not proccessed! Please try a different payment method!!";
+
+
+	  $to = "bubgirl17@gmail"; //recipient
+
+	  $subject = "Payment Declined"; //subject
+	  $header = "From: ". $sender . " <" . $to . ">\r\n";
+
+	  if (mail($email, $subject, $body, $header)){
+			include'thanks.php';
+
+
 	  } else {
 			echo 'Error: something went wrong.';
 		  }
 
 
-
 ?>
-<?php include_once('header.php')?>
+ <?php include_once('header.php');?>
     <title>Checkout - Card</title>
     
   </head>
