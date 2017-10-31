@@ -42,7 +42,7 @@
     	
     	
     	
-    	<input type="submit" value="Submit" name="submitInfo" class="cartButton">
+    	<input type="submit" value="Submit" name="submitCard" class="cartButton">
     	
     </form>
    </div>
