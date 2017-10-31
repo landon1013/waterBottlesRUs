@@ -25,7 +25,7 @@ $query = "INSERT INTO cc_info( number, cvv, date, name, billing, city, state, zi
 $result = mysqli_query($dbconnection, $query) or die ('query failed');
 
 
-	
+	header("Location: thanks.php");
 	
 }
 ?>
