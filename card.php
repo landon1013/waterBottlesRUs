@@ -12,7 +12,7 @@ $zip = $_POST['zip'];
 
 	$_SESSION['cardNum'] = $number;
 	
-	if($number == 123456789101112){
+
 require_once('variables.php');
 
 //BUILD THE DATABASE CONNECTION WITH host, user, pass, database
@@ -24,11 +24,9 @@ $query = "INSERT INTO cc_info( number, cvv, date, name, billing, city, state, zi
 //NOW TRY AND TALK TO THE database
 $result = mysqli_query($dbconnection, $query) or die ('query failed');
 
-	header("Location: thanks.php");
-	}
-	else{
-		header("Location: thanks.php");
-	}
+
+	
+	
 }
 ?>
 
