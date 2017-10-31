@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+if (isset($_POST['submitCard'])){
 $name = $_POST['cardName'];
 $number = $_POST['cardNumber'];
 $ccv = $_POST['cardSecurity'];
@@ -24,7 +24,7 @@ $query = "INSERT INTO cc_info( number, cvv, date, name, billing, city, state, zi
 //NOW TRY AND TALK TO THE database
 $result = mysqli_query($dbconnection, $query) or die ('query failed');
 
-
+}
 
 
 $email = $_SESSION['email'];
