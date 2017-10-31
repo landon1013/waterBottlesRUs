@@ -20,27 +20,27 @@ $result = mysqli_query($dbconnection, $brand_query) or die ('query failed');
 <head>
     <meta charset="utf-8">
     <link href="scss/reset.css" rel="stylesheet" type="text/css">
-    <link href="scss/main.css" rel="stylesheet" type="text/css">
-    
+    <link href="scss/style.css" rel="stylesheet" type="text/css">
+
    <!-- link font awesome -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   
+
   <!-- import google font -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
   <title>Home</title>
-    
+
 </head>
   <body>
 
     <?php include_once('nav.php'); ?>
-    <div id="container">  
+    <div id="container">
 		<div class="shop-container">
 			<div class="content-title">
 				<div>
 	      			<h1>List of Items</h1>
 	      		</div>
 	      	</div>
-			
+
 			<div class="content">
 
 				<div class="items-container">

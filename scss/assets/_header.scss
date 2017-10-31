@@ -6,33 +6,33 @@
 	float: left;
     display: block;
 
-    
+
     img{
-        
+
         padding: .7em 1.5em;
         width: 100%;
     }
-    
+
 }
-
-
-
-       
-.center{
-    width: 35%;
-    float: right;
-    height: 114.4px;
-    }
 
 
 header{
     height: 114px;
-    
+
     span{
         float: right;
         padding: 1em 1em;
-        
+
     }
+}
+
+nav {
+
+  .mainMenu {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+  }
 }
 
 .sidenav {
@@ -88,22 +88,22 @@ header{
 
 @include responsive(laptopM) {
 
-	
+
 	header{
 		width: 70%;
 		height: 114px;
-		
+
 		  .logo{
 		height: 114px;
 		width: 100px;
-        
+
         img{
         width:100%;
         }
     }
 		span{
 			display: none;
-			
+
 		}
 	}
 	#mySidenav{
@@ -156,7 +156,7 @@ header{
 }
 
 
-	
+
 
  .closebtn {
     display: none;
