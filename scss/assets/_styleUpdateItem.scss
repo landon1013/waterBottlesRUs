@@ -1,0 +1,25 @@
+
+.image-container {
+	display: inline-block;
+    float: left;
+    margin-right: 20px;
+    width: 350px;
+    height: auto;
+
+    img {
+    	width: 100%;
+    	height: auto;
+    }
+}
+.details-container {
+	margin-left: 20px;
+
+	label {
+		font-size: 14px;
+		color: $apple;
+	}
+
+	input {
+		margin: 10px;
+	}
+}
