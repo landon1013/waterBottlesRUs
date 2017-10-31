@@ -12,7 +12,7 @@ $city = $_POST['city'];
 $state = $_POST['state'];
 $zip = $_POST['zip'];
 
-	$_SESSION['cardNum'] = $number;
+	
 	
 
 require_once('variables.php');
@@ -32,7 +32,7 @@ $result = mysqli_query($dbconnection, $query) or die ('query failed');
 }
 
 
-if($_SESSION['cardNum']== 123456789101112){
+if($number == 123456789101112){
 $email = $_SESSION['email'];
 $name = $_SESSION['name'];
 $body = "Got it! your order of an  ".$_SESSION['model'].' '.$_SESSION['brand']." has been processed! Your order will be on its way soon!!";

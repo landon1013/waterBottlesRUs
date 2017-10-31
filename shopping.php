@@ -1,5 +1,5 @@
 <?php
-	session_start();
+	
 //$row = mysqli_fetch_array($data);
 
 			//setcookie('username', $row['username'], time()+(60*60*24*30));
