@@ -2,7 +2,7 @@
 
 #Shipping{
 	#main{
-		
+
 			width: 80%;
 	margin: auto;
   .nameInfo {
@@ -50,10 +50,10 @@ input {
     padding: 5px;
     /* margin-bottom: 5px; */
     margin: 3px 0 15px;
-	
-	.cartButton{
-		margin-bottom: 16em;
-	}
+}
+input.cartButton {
+	margin-bottom: 16em;
+	width: 150px;
 }
 .shipping-method {
     border: 1px solid gray;
@@ -71,18 +71,18 @@ h2 {
 
 }
 div#standard{
-    
+
 }
 
 	  }// end of .card info
 }// end of main
 }// end of Shipping
 
-  
+
 	  .progress{
 		  width: 100%;
 		  margin: 1em auto;
-		  
+
 		  img{
 			  width: 100%;
 		  }

@@ -1,8 +1,6 @@
-
-
 <?php include_once('header.php')?>
     <title>Checkout - Card</title>
-    
+
   </head>
   <body >
     <?php include_once('nav.php'); ?>
@@ -20,13 +18,13 @@
     		<span>Name on Card</span><br><input type="text" value=" " name="cardName" class="nameCard"><br>
     		<div class="cardCCV">
     		<label class="expireL"><span>Card Experation</span><br><input type="text" value=" " name="cardExpire" class="expire"></label><br>
-    		
+
     		<label class="securityL"><span>CCV Code</span><br><input type="text" value=" " name="cardSecurity" class="security"></label><br>
     		</div>
     		<div class="keepOpen"></div>
     		<div class="paymentBox">
 				<label class="payment"><input class="payPal" type="radio" value="payPal" name="payment"><img src="img/paypalLogo.png" alt="paypal logo"><div class="cardType"><img src="img/cards.png" alt="cards"></div></label><div class="keepOpen"></div>
-				
+
 				</div>
     	</fieldset>
     	<fieldset>
@@ -39,11 +37,11 @@
     		<label>Zip</label><br>
     		<input type="text" name="zip" class="zip"><br>
     	</fieldset>
-    	
-    	
-    	
+
+
+
     	<input type="submit" value="Submit" name="submitCard" class="cartButton">
-    	
+
     </form>
    </div>
     </div> <!-- end of main div -->

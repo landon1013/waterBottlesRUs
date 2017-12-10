@@ -15,13 +15,15 @@
   $dbconnection = mysqli_connect(HOST,USER,PASSWORD,DB_NAME) or die ('connection failed');
 
   // Build the Query
- $query = "UPDATE `inventory` SET `brand`='$brand', `model`='$model', `size`='$size', `color`='$color', `price`='$price', `stock`=$stock WHERE `id`=$id";
+ $query = "UPDATE `final_inventory` SET `brand`='$brand', `model`='$model', `size`='$size', `color`='$color', `price`='$price', `stock`=$stock WHERE `id`=$id";
 
   // Store infos to database
   $senddata = mysqli_query($dbconnection, $query) or die ('query failed...');
 
   // Hang up
   mysqli_close($dbconnection);
+
+  header('Location: adminDetails.php');
 
 
 ?>

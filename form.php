@@ -1,6 +1,7 @@
 <?php
 session_start();
-if(isset($_POST['submitInfo'])){
+
+if (isset($_POST['submitInfo'])) {
 $name = $_POST['fullname'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
@@ -9,31 +10,59 @@ $address2 = $_POST['address2'];
 $city = $_POST['city'];
 $state = $_POST['state'];
 $zip = $_POST['zipcode'];
-$bottles = "water Bottle";
-$price = "12.99";
+$price = 0;
+for ($i = 0; $i < count($_SESSION['items']); $i++) {
+	$_SESSION['items'][$i][3] = intval(floatval(str_replace("$","",$_SESSION['items'][$i][3]))*100);
+	$price = $price + $_SESSION['items'][$i][3];
+};
+
+if ($_POST['shipping'] == standard) {
+	$price = $price + 400;
+} else {
+	$price = $price + 1000;
+}
+
 
 require_once('variables.php');
 
 //BUILD THE DATABASE CONNECTION WITH host, user, pass, database
 $dbconnection = mysqli_connect(HOST,USER,PASSWORD,DB_NAME) or die ('connection failed');
 
+for ($i = 0; $i < count($_SESSION['items']); $i++) {
+	// Set up the query
+	$modelCheck = $_SESSION['items'][$i][0];
+	$sizeCheck = $_SESSION['items'][$i][1];
+	$colorCheck = $_SESSION['items'][$i][2];
+
+	$query = "SELECT * FROM final_inventory WHERE  model = '$modelCheck' AND size = '$sizeCheck' AND color = '$colorCheck'";
+
+	// Try and talk to the database
+	$result = mysqli_query($dbconnection, $query) or die ('id query failed');
+
+	while ($row = mysqli_fetch_array($result)) {
+		$bottles[$i][] = $row['id'];
+		$bottles[$i][] = $_SESSION['items'][$i][4];
+	}
+}
+$bottles = serialize($bottles);
+
 //BUILD THE query
-$query = "INSERT INTO checkout(name, email, phone, address1, address2, city, state, zip, in_cart, shipping_cost) VALUES ('$name','$email','$phone','$address','$address2','$city','$state','$zip','$bottles','$price')";
+$query = "INSERT INTO final_checkout(name, email, phone, address1, address2, city, state, zip, in_cart, shipping_cost) VALUES ('$name','$email','$phone','$address','$address2','$city','$state','$zip','$bottles','$price')";
 
 //NOW TRY AND TALK TO THE database
 $result = mysqli_query($dbconnection, $query) or die ('query failed');
 
 //RETURN TO THE APPROVE PAGE
-header('Location: card.php');
 	$_SESSION['email'] = $email;
 	$_SESSION['name'] = $name;
+	header('Location: card.php');
 }
 ?>
 
 
 <?php include_once('header.php')?>
     <title>Checkout - Shipping</title>
-    
+
   </head>
   <body >
     <?php include_once('nav.php'); ?>
@@ -66,13 +95,13 @@ header('Location: card.php');
                     <h2>Shipping Method</h2>
                     <div>
                          <label for="standard">$4 Standard</label>
-                         <input id="standard" type="radio" name="shipping" value="Standard" checked/>
+                         <input id="standard" type="radio" name="shipping" value="standard" checked/>
                          <p>(2-3 weeks)</p>
 
                     </div>
                     <div>
                          <label for="ultra">$10 Ultra</label>
-                         <input id="ultra" type="radio" name="shipping" value="Ultra" />
+                         <input id="ultra" type="radio" name="shipping" value="ultra" />
                          <p>(1-3 days)</p>
                     </div>
                </div>
@@ -80,8 +109,8 @@ header('Location: card.php');
           </form>
 
      </body>
-    
- 
+
+
    </div>
     </div> <!-- end of main div -->
 </div> <!-- end of container div -->

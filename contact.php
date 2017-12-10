@@ -4,11 +4,11 @@
 	<title>Contact Us</title>
 </head>
 <body>
-	<?php 
+	<?php
 		require_once('variables.php');
-	
+
 		include_once('header.php');
-		 include_once('nav.php'); 
+		 include_once('nav.php');
 		 if (isset($_POST['submit'])) {
 		 	$first = $_POST['name'];
 		 	$last = $_POST['last'];
@@ -21,7 +21,7 @@
 
 	<div id="contact">
 		<div class="fancy">
-			
+
 		</div>
 		<div class="shout">
 			<h2>Give us a shout</h2>
@@ -29,10 +29,10 @@
 			<br>
 			<p>1-666-467-2826</p>
 		</div>
-		
-		
+
+
 		<form action="contact-thanks.php" method="post" enctype="multipart/form-data">
-			
+
 			<fieldset>
 				<label for="first">First Name</label>
 				<input type="text" name="first">
